@@ -1,6 +1,8 @@
 using InformationDistances
 using Documenter
 
+DocMeta.setdocmeta!(InformationDistances, :DocTestSetup, :(using InformationDistances); recursive=true)
+
 makedocs(;
     modules=[InformationDistances],
     authors="Simon Schoelly <sischoel@gmail.com> and contributors",
