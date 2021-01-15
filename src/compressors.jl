@@ -203,7 +203,7 @@ function compressed_lengths(compressor::CodecCompressor{C}, iter) where {C}
     end
 end
 
-function compressed_length(compressor::CodecCompressor{C}, s::Vector{UInt8}) where {C}
+function compressed_length(compressor::CodecCompressor{C}, s::ByteData) where {C}
 
     codec = C(;compressor.kwargs...)
     TranscodingStreams.initialize(codec)
