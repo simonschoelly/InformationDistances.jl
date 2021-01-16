@@ -60,7 +60,7 @@ jobs:
             Pkg.instantiate()'
       - run: |
           julia --project=docs -e '
-            using Documenter: doctest
+            using Documenter: DocMeta, doctest
             using InformationDistances
             DocMeta.setdocmeta!(InformationDistances, :DocTestSetup, :(using InformationDistances); recursive=true)
             doctest(InformationDistances)'
