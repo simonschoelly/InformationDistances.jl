@@ -62,6 +62,7 @@ jobs:
           julia --project=docs -e '
             using Documenter: doctest
             using InformationDistances
+            DocMeta.setdocmeta!(InformationDistances, :DocTestSetup, :(using InformationDistances); recursive=true)
             doctest(InformationDistances)'
       - run: julia --project=docs docs/make.jl
         env:
