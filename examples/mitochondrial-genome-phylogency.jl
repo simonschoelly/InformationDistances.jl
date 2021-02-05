@@ -54,14 +54,22 @@ begin
 	import PhyloPlots
 end
 
+# ╔═╡ a361f525-31f3-445d-9ad1-5f4344f8e2dd
+PlutoUI.TableOfContents()
+
 # ╔═╡ 8fb6f778-63d3-11eb-37bd-81c244553b6c
 md"""
 # Mitochondrial Genome Phylogency
 
 This notebook tries to replicate a result from [1] where the autors used the [Normalized Compression Distance](https://en.wikipedia.org/wiki/Normalized_compression_distance) to calculate pairwaise distaces between the mitochondrial DNA of various animals and then uses these distances to create a [phylogenetic tree](https://en.wikipedia.org/wiki/Phylogenetic_tree).
 
-Note that the results here might be slightly different from the paper as we do not use the exact same string compressors, and the algorithm used to reconstruct the phylogenetic tree might also be slightly different.
+
 """
+
+# ╔═╡ dfaaa16b-04ee-4a28-bb62-5f7c93fc4c4c
+Markdown.MD(Markdown.Admonition("note", "Note", [
+md"""The results here might be slightly different from the paper as we do not use the exact same string compressors, and the algorithm used to reconstruct the phylogenetic tree might also be slightly different.
+"""]))
 
 # ╔═╡ a08db6ca-63dc-11eb-2d6f-99961e06ef3c
 md"""
@@ -113,8 +121,13 @@ md"""
 
 The Normalized Compressor Distance uses a loseless string compressor - changing the compressor should have an influence on the quality of the result. 
 
-For comparison we also use the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) which is provided by [StringDistances.jl](https://github.com/matthieugomez/StringDistances.jl). Note that the calculations with the Levenshtein Distance might need a few minutes.
+For comparison we also use the [Levenshtein Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) which is provided by [StringDistances.jl](https://github.com/matthieugomez/StringDistances.jl). Calculating this istance might need a few minutes.
 """
+
+# ╔═╡ 9aca90d2-45dc-4424-a6ae-769c62e80bf4
+Markdown.MD(Markdown.Admonition("tip", "Tip", [
+md"""When viewing the static html version of this notebook it might not be possible to choose another distance - try running the interactive notebook instead.
+"""]))
 
 # ╔═╡ 564ac642-4c95-11eb-1329-a15bb5b6bef0
 @bind distance_key PlutoUI.Radio([
@@ -196,7 +209,9 @@ md"""
 """
 
 # ╔═╡ Cell order:
+# ╟─a361f525-31f3-445d-9ad1-5f4344f8e2dd
 # ╟─8fb6f778-63d3-11eb-37bd-81c244553b6c
+# ╟─dfaaa16b-04ee-4a28-bb62-5f7c93fc4c4c
 # ╟─a08db6ca-63dc-11eb-2d6f-99961e06ef3c
 # ╠═ae20362a-4c60-11eb-2e5a-5b3904d7ef11
 # ╠═38a62858-4c67-11eb-312a-cb83457c1b8a
@@ -204,6 +219,7 @@ md"""
 # ╠═2b43945a-53f6-11eb-3555-7509d07e5fe4
 # ╠═188e2e0e-5404-11eb-04b8-936f9971bd95
 # ╟─3d59590e-63de-11eb-1275-d3545baf1a6f
+# ╟─9aca90d2-45dc-4424-a6ae-769c62e80bf4
 # ╠═564ac642-4c95-11eb-1329-a15bb5b6bef0
 # ╠═5f9ccc3a-4c96-11eb-3857-65954810d179
 # ╟─f4c5057a-63de-11eb-0745-293580109763
