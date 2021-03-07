@@ -56,5 +56,10 @@ julia> d_bzip2(s2, s3)
 0.5783132530120482
 ```
 
+## Example Notebooks
+The examples folder contains an interactive notebook that can be run with [Pluto.jl](https://github.com/fonsp/Pluto.jl). To quickly view the notebook online there is also a static non-interactive version where it is currently not possible to choose different options.
+
+* [mitochondrial-enome-phylogency.jl](https://github.com/simonschoelly/InformationDistances.jl/blob/master/examples/mitochondrial-genome-phylogency.jl) &nbsp; &nbsp; &nbsp; [non interactive version](https://simonschoelly.github.io/InformationDistances.jl/examples/mitochondrial-genome-phylogency.jl.html)
+
 ## References
 [Li, Ming, Xin Chen, Xin Li, Bin Ma, and Paul MB Vitányi. "The similarity metric." IEEE transactions on Information Theory 50, no. 12 (2004): 3250-3264.](https://homepages.cwi.nl/~paulv/papers/similarity.pdf)
